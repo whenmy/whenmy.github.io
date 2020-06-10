@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>date_time库 | Whenmy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="boost">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="/css/style.css?v=1.4.4">
+    
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	false,
+            lv: JSON.parse('{"enable":false,"app_id":null,"app_key":null,"icon":true}'),
+            v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
+            g: JSON.parse('{"enable":false,"lazy":true,"owner":"whenmy","repo":"blog-whenmy","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
+            d: JSON.parse('{"app_id":null}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      
+      <img src="/img/me_background.png" class="brand-bg">
+      
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Whenmy</h5>
+          <a href="mailto:2270303613@qq.com" title="2270303613@qq.com" class="mail">
+            
+              <span>2</span>
+            
+              <span>2</span>
+            
+              <span>7</span>
+            
+              <span>0</span>
+            
+              <span>3</span>
+            
+              <span>0</span>
+            
+              <span>3</span>
+            
+              <span>6</span>
+            
+              <span>1</span>
+            
+              <span>3</span>
+            
+              <span>@</span>
+            
+              <span>q</span>
+            
+              <span>q</span>
+            
+              <span>.</span>
+            
+              <span>c</span>
+            
+              <span>o</span>
+            
+              <span>m</span>
+            
+          </a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/whenmy" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                CATEGORIES
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                TAGS
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                ARCHIVES
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                ABOUT
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>date_time库</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+    <img src="/img/title_background.png" class="header-bg">
+    <div class="container fade-scale">
+        <h1 class="title">date_time库</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-06-01T10:34:49.000Z" itemprop="datePublished" class="page-time">
+  2020-06-01
+</time>
+
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-boost/date-time"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">date_time库</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-06-01 18:34:49" datetime="2020-06-01T10:34:49.000Z"  itemprop="datePublished">2020-06-01</time>
+
+            
+
+
+            
+
+            
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ul>
+<li><strong>date_time</strong>库需要编译才能使用  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b2 –with-date_time toolset&#x3D;msvc link&#x3D;static stage</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>特殊时间概念（枚举值，位于<strong>boost::date_time</strong>命名空间中）<ul>
+<li>pos_infin            <em>表示正无限</em></li>
+<li>neg_infin            <em>表示负无限</em></li>
+<li>not_a_date_time    <em>无限时间</em></li>
+<li>min_date_time        <em>可表示的最小日期或时间</em></li>
+<li>max_date_time        <em>可表示的最大日期或时间</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="date日期组件"><a href="#date日期组件" class="headerlink" title="date日期组件"></a><strong>date</strong>日期组件</h2><ul>
+<li><p>概述<br>  <strong>date</strong>是<strong>date_time</strong>库处理日期的核心类，使用一个32位的整数作为内部存储。</p>
+</li>
+<li><p>命名空间和头文件</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/date_time/gregorian/gregorian.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::gregorian;</span><br></pre></td></tr></table></figure>
+<!--more--></li>
+<li><p>创建日期对象</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">date d1;				<span class="comment">//一个值为not_a_date_time的无效日期</span></span><br><span class="line"><span class="function">date <span class="title">d2</span><span class="params">(<span class="number">2020</span>, <span class="number">1</span>, <span class="number">1</span>)</span></span>;	<span class="comment">//使用数字构造日期</span></span><br><span class="line"><span class="function">date <span class="title">d3</span><span class="params">(<span class="number">2000</span>, Jan, <span class="number">1</span>)</span></span>;	<span class="comment">//使用英文指定月份</span></span><br><span class="line"><span class="function">date <span class="title">d4</span><span class="params">(d2)</span></span>;			<span class="comment">//拷贝构造</span></span><br></pre></td></tr></table></figure>
+<p>  <em>如果在创建超过<strong>1400-01-01</strong>到<strong>9999-12-31</strong>或者不存在<strong>2017-02-29</strong>则<strong>date_time</strong>库会抛出异常，使用<strong>std::exception</strong>捕获，<strong>what()</strong>获得错误信息</em></p>
+</li>
+<li><p>工厂函数<em>位于命名空间：<strong>boost::gregorian</strong></em></p>
+<ul>
+<li>from_string()                    <em>使用分割符<strong>“/“</strong>，<strong>“-“</strong>分割（”2020/12/12”或”2020-12-12”）</em></li>
+<li>from_undelimited_string()        <em>无分割符（20200101）</em><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">date d1 = from_string(<span class="string">"2020/12/12"</span>);</span><br><span class="line"><span class="function">date <span class="title">d2</span><span class="params">(from_string(<span class="string">"2020-12-12"</span>))</span></span>;</span><br><span class="line">date d3 = from_undelimited_string(<span class="string">"20200101"</span>);</span><br></pre></td></tr></table></figure>
+<em>类<strong>day_clock</strong>是一个天级别的时钟，它是一个工厂类，调用它的静态成员函数<strong>local_day()</strong>或<strong>universal_day()</strong>会返回一个当天的日期对象，分别为本地日期和<strong>UTC</strong>日期。<strong>day_clock</strong>内部使用了<strong>C</strong>标准函数<strong>localtime()</strong>和<strong>gmtime()</strong>，因此<strong>local_day()</strong>的行为依赖操作系统的时区设置</em></li>
+</ul>
+</li>
+<li><p>访问日期</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">date.year();			<span class="comment">//返回年份</span></span><br><span class="line">date.month();			<span class="comment">//返回月份</span></span><br><span class="line">date.day();				<span class="comment">//返回日期</span></span><br><span class="line">date.year_monty_day();	<span class="comment">//同时返回年、月、日</span></span><br><span class="line">date.day_of_week();		<span class="comment">//返回date的星期数（0表示星期天）</span></span><br><span class="line">date.day_of_year();		<span class="comment">//返回当年的第几天</span></span><br><span class="line">date.end_of_month();	<span class="comment">//返回当月的最后一天</span></span><br><span class="line">date.week_namber();		<span class="comment">//返回date所在当年的第几周</span></span><br><span class="line">date.is_infinity();		<span class="comment">//是否是一个无限日期</span></span><br><span class="line">date.is_neg_infinity();	<span class="comment">//是否是一个负无限日期</span></span><br><span class="line">date.is_pos_infinity(); <span class="comment">//是否是一个正无限日期</span></span><br><span class="line">date.is_not_a_date();	<span class="comment">//是否是一个无效日期</span></span><br><span class="line">date.is_special();		<span class="comment">//是否是任意一个特殊日期</span></span><br></pre></td></tr></table></figure></li>
+<li><p>日期的输出<br>  位于<strong>boost::gregorian</strong>作用域下提供了3个自由函数。</p>
+<ul>
+<li>to_simple_string(date)        <em>转换为<strong>YYYY-mmm-DD</strong>格式的字符串</em></li>
+<li>to_iso_string(date)            <em>转换为<strong>YYYYMMDD</strong>格式的数字字符串</em></li>
+<li>to_iso_extended_string(date)  <em>转换为<strong>YYY-MM-DD</strong>格式的数字字符串</em></li>
+<li>支持输入输出流，默认使用<strong>YYYY-mmm-DD</strong>格式</li>
+</ul>
+</li>
+<li><p>和<strong>C</strong>结构<strong>tm</strong>互相转换规则和函数<em>位于命名空间：<strong>boost::gregorian</strong></em></p>
+<ul>
+<li>to_tm(date): <strong>date</strong>转换到<strong>tm</strong>，将<strong>tm</strong>的时分秒<strong>tm_hour/tm_min/tm_sec</strong>均置为<strong>0</strong>，将夏令时标志<strong>tm_isdst</strong>置为<strong>-1</strong>（表示未知）</li>
+<li>date_from_tm(datetm): <strong>tm</strong>转换到<strong>date</strong>,只使用年月日三个成员<strong>tm_year/tm_mon/tm_mday</strong>，其他成员忽略</li>
+</ul>
+</li>
+</ul>
+<h3 id="date-duration日期长度"><a href="#date-duration日期长度" class="headerlink" title="date_duration日期长度"></a><strong>date_duration</strong>日期长度</h3><ul>
+<li>日期长度是以天为单位的时长，是度量时间长度的标量。它与日期不同，其值可以使任意整数，可正可负。基本的日期长度类是<strong>date_duration</strong></li>
+<li><strong>date_duration</strong>支持全序比较操作（==，!=，&lt;，&lt;=），也支持完全的加减和递增递减，还支持除以一个整数但不支持除以另一个<strong>date_duration</strong>，其他运算不支持</li>
+<li><strong>date_time</strong>库为<strong>date_duration</strong>定义了一个常用<strong>typedef:days</strong>这个新名字  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实例</span></span><br><span class="line"><span class="function">days <span class="title">dd1</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"><span class="function">days <span class="title">dd2</span><span class="params">(<span class="number">-100</span>)</span></span>;</span><br><span class="line"><span class="function">days <span class="title">dd3</span><span class="params">(<span class="number">255</span>)</span></span>;</span><br></pre></td></tr></table></figure></li>
+<li>为了方便计算时长，<strong>date_time</strong>库还提供了<strong>months，years，weeks</strong>三个时长类，分辨表示月，年，星期，含义与<strong>days</strong>类似<ul>
+<li>months.number_of_months()    <em>取表示的月数</em></li>
+<li>years.number_of_years()    <em>获取表示的年数</em></li>
+<li><strong>weeks</strong>除构造函数以7为单位以外，其他行为与<strong>days</strong>相同<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">weeks <span class="title">w</span><span class="params">(<span class="number">3</span>)</span></span>;	 <span class="comment">//3个星期</span></span><br><span class="line"><span class="function">months <span class="title">m</span><span class="params">(<span class="number">5</span>)</span></span>; <span class="comment">//5个月</span></span><br><span class="line"><span class="function">years <span class="title">y</span><span class="params">(<span class="number">2</span>)</span></span>;	 <span class="comment">//2年</span></span><br><span class="line">months m2 = y + m; <span class="comment">//2年零5个月（29个月）</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>日期运算<ul>
+<li><strong>date</strong>支持加减运算，但两个<strong>date</strong>对象的加法操作毫无意义（<strong>date_time</strong>库会以编译错误的方式通知我们），<strong>date</strong>主要用来与时长进行运算。<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//计算从2000年1月1日到2017年11月18日的天数</span></span><br><span class="line">date d1(2000, 1, 1), d2(2017, 11, 18);</span><br><span class="line">days ds = d2 - d1;	<span class="comment">//6531天</span></span><br><span class="line"></span><br><span class="line">d1 += days(<span class="number">10</span>);		<span class="comment">//2000-1-11</span></span><br><span class="line"></span><br><span class="line">d1 += months(<span class="number">2</span>);	<span class="comment">//2000-3-11</span></span><br><span class="line"></span><br><span class="line">d1 -= weeks(<span class="number">1</span>);		<span class="comment">//2000-3-04</span></span><br><span class="line"></span><br><span class="line">d2 -=years(<span class="number">10</span>);		<span class="comment">//2007-11-18</span></span><br></pre></td></tr></table></figure></li>
+<li>日期与特殊日期长度、特殊日期与日期长度进行运算结构也是特殊日期</li>
+<li>在与<strong>months、years</strong>这两个类时长计算时需注意<em>如果日期是月末的最后一天，那么加减月或年得到的同样是月末，但当天是月末的28号后，加减到2月份等到的是总是月末，原来天数信息丢失</em><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">date <span class="title">d</span><span class="params">(<span class="number">2017</span>, <span class="number">3</span>, <span class="number">30</span>)</span></span>;</span><br><span class="line">d -= months(<span class="number">1</span>);		<span class="comment">//2017-2-28	变月末，原来30号的日期丢失</span></span><br><span class="line">d -= months(<span class="number">1</span>);		<span class="comment">//2017-1-31	</span></span><br><span class="line">d += months(<span class="number">2</span>);		<span class="comment">//2017-3-31	与原来日期不相等</span></span><br></pre></td></tr></table></figure></li>
+<li>使用<strong>days</strong>则不会出现这样的问题，如果担心<strong>weeks、months、years</strong>这些时长类被无意使用可以<strong>undef</strong>宏<strong>BOOST_DATE_TIME_OPTIONAL_GREGORIAN_TYPE</strong>，这样使得<strong>date_time</strong>库不包含它们的定义头文件<strong>&lt;boost/date_time/gregorian/greg_duration_types.hpp&gt;</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="date-period日期区间"><a href="#date-period日期区间" class="headerlink" title="date_period日期区间"></a><strong>date_period</strong>日期区间</h3><ul>
+<li><strong>date_time</strong>库使用<strong>date_period</strong>来表示日期区间的概念，它是时间轴上的一个左闭右开的区间，其端点是两个<strong>date</strong>对象。日期区间的左边界必须小于右边界，否则<strong>date_period</strong>将表示一个无效日期区间</li>
+<li><strong>date_period</strong>可以指定区间的两个端点构造区间，也可以指定左端点加上时长构造区间  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">date_period <span class="title">dp1</span><span class="params">(date(<span class="number">2017</span>, <span class="number">1</span>, <span class="number">1</span>), days(<span class="number">20</span>))</span></span>;</span><br><span class="line"><span class="function">date_period <span class="title">dp1</span><span class="params">(date(<span class="number">2017</span>, <span class="number">1</span>, <span class="number">1</span>), date(<span class="number">2016</span>, <span class="number">1</span>, <span class="number">1</span>))</span></span>;	<span class="comment">//无效</span></span><br><span class="line"><span class="function">date_period <span class="title">dp1</span><span class="params">(date(<span class="number">2017</span>, <span class="number">1</span>, <span class="number">1</span>), days(<span class="number">-20</span>))</span></span>;	<span class="comment">//无效</span></span><br></pre></td></tr></table></figure></li>
+<li>成员函数<ul>
+<li>begin();         <em>返回区间左端点</em></li>
+<li>last();         <em>返回区间右端点</em></li>
+<li>end();         <em>返回区间右端点后面一天</em></li>
+<li>length();      <em>返回区间长度（天数）</em></li>
+<li>is_before();   <em>日期区间是否在某个日期前</em></li>
+<li>is_after();    <em>日期区间是否在某个日期后</em></li>
+<li>contains();    <em>日期区间是否包含另一个日期区间或日期</em></li>
+<li>intersects();  <em>两个日期区间是否存在交集</em></li>
+<li>intersection();<em>返回两个区间的交集，如果没有，返回一个无效区间</em></li>
+<li>is_adjacent(); <em>两个日期区间是否相邻</em></li>
+<li>merge();       <em>返回两个日期区间的并集，如果日期区间无交集或相邻，则返回无效区间</em></li>
+<li>span();        <em>合并两个日期区间及两者间的间隔</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="日期迭代器"><a href="#日期迭代器" class="headerlink" title="日期迭代器"></a>日期迭代器</h3><ul>
+<li><strong>date_time</strong>为日期处理提供了日期迭代器概念，可以使用递增或递减连续访问日期，这些日期迭代器包括<strong>day_iterator、week_iterator、month_iterator、year_iterator</strong>，它们分别以天、周、月、年为单位</li>
+<li>日期迭代器重载了比较操作符，不需要用解引用操作符就可以直接比较</li>
+<li><em>如果没有<strong>difference_type、pointer、reference</strong>等内部类型定义，就不能使用<strong>std::advance()_或</strong>operator+=<em>_来前进或后退</em></em></li>
+</ul>
+<h3 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h3><ul>
+<li><strong>boost::gregorian::gregorian_calendar</strong>类提供了一些常用静态函数<ul>
+<li>is_leap_year()<em>可以判断年份是否是闰年</em></li>
+<li>end_of_month_day() <em>返回该月的最后一天</em></li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h2 id="time-duration时间组件"><a href="#time-duration时间组件" class="headerlink" title="time_duration时间组件"></a><strong>time_duration</strong>时间组件</h2><ul>
+<li>命名空间和头文件  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/date_time/posix_time/posix_time.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::posix_time;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-06-03T12:25:52.097Z" itemprop="dateUpdated">2020-06-03 20:25:52</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="/about">
+            <img src="/img/avatar.jpg" alt="Whenmy">
+            Whenmy
+        </a>
+    </footer>
+</blockquote>
+
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/boost/" rel="tag">boost</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=2020/06/01/boost/date-time/&title=《date_time库》 — Whenmy&pic=/about/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=2020/06/01/boost/date-time/&title=《date_time库》 — Whenmy&source=使用方式
+date_time库需要编译才能使用  1b2 –with-date_time toolset&#x3D;msvc link&#x3D;stat..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="next">
+      <a href="2020/06/01/boost/install/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">boost安装、编译和配置（windows）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用方式"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用方式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#date日期组件"><span class="post-toc-number">2.</span> <span class="post-toc-text">date日期组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#date-duration日期长度"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">date_duration日期长度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#date-period日期区间"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">date_period日期区间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日期迭代器"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">日期迭代器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他功能"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">其他功能</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#time-duration时间组件"><span class="post-toc-number">3.</span> <span class="post-toc-text">time_duration时间组件</span></a></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
+    
+</article>
+
+
+</div>
+
+    </main>
+    <footer class="footer ">
+    
+    <div class="top">
+        
+            <p>
+    <span>Links：</span>
+    
+    <span class="blogroll-item">
+        <a href="" target="_blank">HOME</a>
+    </span>
+    
+</p>
+
+        
+    </div>
+    
+    <div class="bottom">
+        <p>
+            <span>
+                Whenmy &copy; 2020
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+
+            
+                
+<span class="site-uv" title="总访客量">
+    <i class="icon icon-user"></i>
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>
+
+
+<span class="site-pv" title="总访问量">
+    <i class="icon icon-eye"></i>
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+            
+        </p>
+    </div>
+</footer>
+
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=2020/06/01/boost/date-time/&title=《date_time库》 — Whenmy&pic=/about/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=2020/06/01/boost/date-time/&title=《date_time库》 — Whenmy&source=使用方式
+date_time库需要编译才能使用  1b2 –with-date_time toolset&#x3D;msvc link&#x3D;stat..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABu0lEQVR42u3aQY6DMAwFUO5/6c52pKrwbZOUGb2sqoLCY2OZ7xxHvF6/1vnV93vO/z9WLFxc3DH3dbrOQa/Weucm9+Pi4u7nfqoYva0nvy9suLi4j+TmL5Dcj4uL+7+50cNwcXH/FLfXsuQ5xrxtwsXF3cm995HzD57b8l1cXNwWtxd0JhFq8lFUfjouLu4Wbl5QqiOWXnQSDXdxcXEXc5MjEUk4csPnSnKYAxcXdzs3GXXk//SOYly0Tbi4uF/i5oVscuiqWpeO/CZcXNybuAk0aYPyGKU6PvmY4uDi4i7g3rxRksEMRji4uLjP4c4HpUmLUyiduLi4i7nnlycBR75P4cVwcXE3cvPt5oVp8kRcXNw93GokWv0GmRwDLaS8uLi4W7iFshLHKNXy9/EeXFzcjdx8yDofxzaHrLi4uNu5vS0mrOZABRcXdzF3EonmQ5RJWbxobnBxcRdwq6VkPmqt9irN8oeLizvm3jU6rb5GNUDBxcXdz83zh/lItVrycHFxn8/ND1Ql+1fHKri4uE/mJk1PPqxNmiFcXNz93N7hiUkwmgeyuLi4+7nlqWzQpvSKYLI/Li7uYu4PL5A/DdhfycYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.4.4"></script>
+<script type="text/javascript" src="/js/plugins/ios-orientationchange-fix.js?v=1.4.4"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.4.4"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.4.4"></script>
+
+<!-- third-party -->
+
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.4.4"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    
+    
+
+
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
