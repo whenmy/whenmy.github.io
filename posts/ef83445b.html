@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -21,9 +17,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>Whenmy</title>
+  <title>ssr_set_up - Whenmy</title>
   
 
+  
+    <meta name="description" content="本教程是已有服务器后的配置
+
+配置部署服务器在服务器上执行以下命令
+wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh">
   
 
   <!-- feed -->
@@ -273,7 +274,7 @@
   
     
     
-        <div class='cover-wrapper  focus' style="display: none;">
+        <div class='cover-wrapper post focus' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/27a0c669f8f811ea8d294c348823088a.jpg"></div>
           
@@ -339,8 +340,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">SSR搭建</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -349,14 +350,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -370,125 +371,247 @@
         
 
 <div class='l_main'>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/d53a8e19.html">
-        Boost库安装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <h3 id="Boost下载"><a href="#Boost下载" class="headerlink" title="Boost下载"></a>Boost下载</h3><div class="tag link"><a class="link-card" title="Boost官网下载" target="_blank" rel="noopener" href="https://www.boost.org/"><div class="left"><img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">Boost官网下载</p><p class="url">https://www.boost.org/</p></div></a></div>
-<span class='p red'>下载的压缩包解压任意目录</span>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/d53a8e19.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        SSR搭建
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/about/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/1f974454f8f811ea8d294c348823088a.jpg">
+    <p>Whenmy</p>
+  </a>
 </div>
 
-          </div>
+          
         
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Oct 1, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
+      <div id="lc-pv" data-title="SSR搭建" data-path="/posts/ef83445b.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
+      </div>
     
-    <h2 class="article-title" >
-      <a href="/posts/ef83445b.html">
-        SSR搭建
-      </a>
-    </h2>
+  </div>
+
+
   
-  <div class='md'>
-    
-      <span class='p red'>本教程是已有服务器后的配置</span>
+  <span class='p red'>本教程是已有服务器后的配置</span>
 
 <h3 id="配置部署服务器"><a href="#配置部署服务器" class="headerlink" title="配置部署服务器"></a>配置部署服务器</h3><p>在服务器上执行以下命令</p>
 <pre><code class="Bash">wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh</code></pre>
-    
-  </div>
+<a id="more"></a>
+
+<p>如果提示：若提示：<code>wget :command not found</code><br>请执行：<code>yum install wget -y</code></p>
+<p>出现下图开始配置，输入ssr连接密码，如果不输入，你连接ssr是会是默认的密码。</p>
+<div class="gallery left">
+              <p><img src="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/c87c49e403ae11eb8d2b4c348823088d.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/c87c49e403ae11eb8d2b4c348823088d.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p>
+            </div>
+
+<p>然后输入端口后，按任意键开始安装，等一会。</p>
+<div class="gallery left">
+              <p><img src="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/cefce1e803ae11eb8d2b4c348823088d.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/cefce1e803ae11eb8d2b4c348823088d.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p>
+            </div>
+
+<p>出现下面界面说明安装成功了，记好下面的信息。一会连接SSR需要用上。</p>
+<div class="gallery left">
+              <p><img src="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/d31b7a9103ae11eb8d2b4c348823088d.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/d31b7a9103ae11eb8d2b4c348823088d.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p>
+            </div>
+
+<h3 id="一键加速VPS服务器-（Google加速器安装方法）"><a href="#一键加速VPS服务器-（Google加速器安装方法）" class="headerlink" title="一键加速VPS服务器 （Google加速器安装方法）"></a>一键加速VPS服务器 （Google加速器安装方法）</h3><p>此加速教程为谷歌BBR加速，加速后对速度的提升很明显，所以推荐部署加速脚本。该加速方法是开机自动启动，部署一次就可以了。</p>
+<p>将下面命令整个复制，粘贴进控制台，然后会自动运行</p>
+<pre><code class="Bash">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></pre>
+<p>按任意键确定安装</p>
+<div class="gallery left">
+              <p><img src="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/740ffcf803e311eb8d2b4c348823088d.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/740ffcf803e311eb8d2b4c348823088d.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p>
+            </div>
+
+<p>安装完成如下图，最后输入y重启服务器即可</p>
+<div class="gallery left">
+              <p><img src="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/7ab45e7a03e311eb8d2b4c348823088d.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource/post_img/ssr_set_up/7ab45e7a03e311eb8d2b4c348823088d.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=""></p>
+            </div>
+
+<h3 id="SSR客户端下载"><a href="#SSR客户端下载" class="headerlink" title="SSR客户端下载"></a>SSR客户端下载</h3><div class="tag link"><a class="link-card" title="SSR Windows客户端" target="_blank" rel="noopener" href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases"><div class="left"><img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">SSR Windows客户端</p><p class="url">https://github.com/shadowsocksrr/shadowsocksr-csharp/releases</p></div></a></div>
+
+<div class="tag link"><a class="link-card" title="SSR Android客户端" target="_blank" rel="noopener" href="https://github.com/shadowsocksrr/shadowsocksr-android/releases"><div class="left"><img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">SSR Android客户端</p><p class="url">https://github.com/shadowsocksrr/shadowsocksr-android/releases</p></div></a></div>
+
+<div class="tag link"><a class="link-card" title="SSR Mac客户端" target="_blank" rel="noopener" href="https://github.com/qinyuhang/ShadowsocksX-NG-R/releases"><div class="left"><img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">SSR Mac客户端</p><p class="url">https://github.com/qinyuhang/ShadowsocksX-NG-R/releases</p></div></a></div>
+
+<p><strong>SSR iOS客户端</strong>：iPhone/iPad打开App Store，搜索Mume(暮梅)、Potatso Lite、FastSocks、Shadowrocket等。无法搜索到上述软件请使用外区账号搜索。</p>
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-        
-      </div>
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/ef83445b.html'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-01T21:12:42+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Oct 1, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=whenmy.com/posts/ef83445b.html&title=ssr_set_up - Whenmy&summary=本教程是已有服务器后的配置
+
+配置部署服务器在服务器上执行以下命令
+wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=whenmy.com/posts/ef83445b.html&title=ssr_set_up - Whenmy&summary=本教程是已有服务器后的配置
+
+配置部署服务器在服务器上执行以下命令
+wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=whenmy.com/posts/ef83445b.html&title=ssr_set_up - Whenmy&summary=本教程是已有服务器后的配置
+
+配置部署服务器在服务器上执行以下命令
+wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/posts/d53a8e19.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Boost库安装</p>
+          <p class='content'>Boost下载Boost官网下载https://www.boost.org/
+下载的压缩包解压任意目录
+
+
+
+编译
+Boost库大部分不需要编译，直接包含头文件即可
+如果使用需要编译的库执行bo...</p>
+        </a>
+      
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
 
 
 </div>
@@ -557,6 +680,29 @@
   
     
     
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">配置部署服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%94%AE%E5%8A%A0%E9%80%9FVPS%E6%9C%8D%E5%8A%A1%E5%99%A8-%EF%BC%88Google%E5%8A%A0%E9%80%9F%E5%99%A8%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-text">一键加速VPS服务器 （Google加速器安装方法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSR%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD"><span class="toc-text">SSR客户端下载</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
   
 
   <section class="widget category shadow desktop">
@@ -586,8 +732,6 @@
   
     
     
-
-  
 
   
 
