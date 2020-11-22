@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -21,9 +17,15 @@
 
   <!-- 页面元数据 -->
   
-  <title>Whenmy</title>
+  <title>pip国内镜像源 - Whenmy</title>
   
 
+  
+    <meta name="description" content="国内镜像
+阿里云 http://mirrors.aliyun.com/pypi/simple/
+豆瓣 http://pypi.douban.com/simple/
+清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+中国科学技术大学 http://pypi.mirrors...">
   
 
   <!-- feed -->
@@ -273,7 +275,7 @@
   
     
     
-        <div class='cover-wrapper  focus' style="display: none;">
+        <div class='cover-wrapper post focus' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/27a0c669f8f811ea8d294c348823088a.jpg"></div>
           
@@ -339,8 +341,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">pip国内镜像源</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -349,14 +351,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -370,49 +372,69 @@
         
 
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/posts/c6d2374f.html">
+      <h1 class="title">
         pip国内镜像源
-      </a>
-    </h2>
-  
-  <div class='md'>
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/about/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/1f974454f8f811ea8d294c348823088a.jpg">
+    <p>Whenmy</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Nov 21, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="pip国内镜像源" data-path="/posts/c6d2374f.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
     
-      <h3 id="国内镜像"><a href="#国内镜像" class="headerlink" title="国内镜像"></a>国内镜像</h3><ol>
+  </div>
+
+
+  
+  <h3 id="国内镜像"><a href="#国内镜像" class="headerlink" title="国内镜像"></a>国内镜像</h3><ol>
 <li>阿里云 <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></li>
 <li>豆瓣 <a target="_blank" rel="noopener" href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></li>
 <li>清华大学 <a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a></li>
@@ -421,162 +443,56 @@
 
 </li>
 </ol>
-    
-  </div>
+<a id="more"></a>
+
+<h3 id="临时设置源"><a href="#临时设置源" class="headerlink" title="临时设置源"></a>临时设置源</h3><p>可以在使用pip时加上参数<code>-i</code>和镜像地址<br>例如从清华大学源安装packges：</p>
+<pre><code class="Bash">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ packges</code></pre>
+<h3 id="永久设置源"><a href="#永久设置源" class="headerlink" title="永久设置源"></a>永久设置源</h3><ol>
+<li><code>linux</code>修改<code>~/.pip/pip.conf</code>(没有就创建一个)，内容如下：<pre><code>[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple/</code></pre></li>
+<li><code>windows</code>直接在<code>user</code>目录中创建一个<code>pip</code>目录，如：<code>C:\Users\xx\pip</code>，新建文件<code>pip.ini</code>，内容如下:<pre><code>[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple</code></pre></li>
+</ol>
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-11-21</time>
-        
-      </div>
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/c6d2374f.html'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
-        
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/74511220.html">
-        pycharm安装与激活
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <h3 id="Pycharm安装"><a href="#Pycharm安装" class="headerlink" title="Pycharm安装"></a>Pycharm安装</h3><div class="tag link"><a class="link-card" title="Pycharm官网下载" target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows"><div class="left"><img src="https://cdn.jsdelivr.net/gh/whenmy/resource/image/otherlogo/pycharm.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource/image/otherlogo/pycharm.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">Pycharm官网下载</p><p class="url">https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows</p></div></a></div>
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-11-21</time>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/posts/74511220.html'>
-            Read More
-          </a>
-        </div>
+      
+        <a class='next' href='/posts/74511220.html'>
+          <p class='title'>pycharm安装与激活<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Pycharm安装Pycharm官网下载https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=wind...</p>
+        </a>
       
     </div>
   
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/d53a8e19.html">
-        Boost库安装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <h3 id="Boost下载"><a href="#Boost下载" class="headerlink" title="Boost下载"></a>Boost下载</h3><div class="tag link"><a class="link-card" title="Boost官网下载" target="_blank" rel="noopener" href="https://www.boost.org/"><div class="left"><img src="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/whenmy/resource@master/image/otherlogo/chrome.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">Boost官网下载</p><p class="url">https://www.boost.org/</p></div></a></div>
-<span class='p red'>下载的压缩包解压任意目录</span>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-01</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/d53a8e19.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/ef83445b.html">
-        SSR搭建
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <span class='p red'>本教程是已有服务器后的配置</span>
-
-<h3 id="配置部署服务器"><a href="#配置部署服务器" class="headerlink" title="配置部署服务器"></a>配置部署服务器</h3><p>在服务器上执行以下命令</p>
-<pre><code class="Bash">wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh</code></pre>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-01</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/ef83445b.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
 </div>
@@ -646,6 +562,23 @@
     
     
 
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F"><span class="toc-text">国内镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E8%AE%BE%E7%BD%AE%E6%BA%90"><span class="toc-text">临时设置源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B8%E4%B9%85%E8%AE%BE%E7%BD%AE%E6%BA%90"><span class="toc-text">永久设置源</span></a></li></ol>
+    </div>
+  </section>
+
+
   
 
   
@@ -653,6 +586,10 @@
     
 
   
+
+  
+    
+    
 
   
 
